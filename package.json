@@ -4,7 +4,7 @@
   "scripts": {
     "codegen": "graph codegen",
     "build": "graph build",
-    "deploy": "graph deploy --node https://api.studio.thegraph.com/deploy/ diva",
+    "deploy": "graph deploy --access-token 68a13fe50eb041669bf06d2398589e52 --node https://api.thegraph.com/deploy/ diva",
     "create-local": "graph create --node http://localhost:8020/ diva",
     "remove-local": "graph remove --node http://localhost:8020/ diva",
     "deploy-local": "graph deploy --node http://localhost:8020/ --ipfs http://localhost:5001 diva"

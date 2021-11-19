@@ -22,7 +22,7 @@ export function handleLiquidityAdded(event: LiquidityAdded): void {
   }
 
   // BigInt and BigDecimal math are supported
-  entity.count = entity.count + BigInt.fromI32(1)
+  entity.count = entity.count.plus(BigInt.fromI32(1))
 
   // Entity fields can be set based on event parameters
   entity.optionSetId = event.params.optionSetId
