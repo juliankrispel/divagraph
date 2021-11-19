@@ -1,0 +1,167 @@
+[
+  {
+    "anonymous": false,
+    "inputs": [
+      {
+        "indexed": true,
+        "internalType": "uint256",
+        "name": "optionSetId",
+        "type": "uint256"
+      },
+      {
+        "indexed": true,
+        "internalType": "address",
+        "name": "from",
+        "type": "address"
+      },
+      {
+        "indexed": false,
+        "internalType": "uint256",
+        "name": "collateralAmount",
+        "type": "uint256"
+      }
+    ],
+    "name": "LiquidityAdded",
+    "type": "event"
+  },
+  {
+    "anonymous": false,
+    "inputs": [
+      {
+        "indexed": true,
+        "internalType": "uint256",
+        "name": "optionSetId",
+        "type": "uint256"
+      },
+      {
+        "indexed": true,
+        "internalType": "address",
+        "name": "from",
+        "type": "address"
+      },
+      {
+        "indexed": false,
+        "internalType": "uint256",
+        "name": "collateralAmount",
+        "type": "uint256"
+      }
+    ],
+    "name": "LiquidityRemoved",
+    "type": "event"
+  },
+  {
+    "anonymous": false,
+    "inputs": [
+      {
+        "indexed": true,
+        "internalType": "uint256",
+        "name": "optionSetId",
+        "type": "uint256"
+      },
+      {
+        "indexed": true,
+        "internalType": "address",
+        "name": "shortToken",
+        "type": "address"
+      },
+      {
+        "indexed": true,
+        "internalType": "address",
+        "name": "longToken",
+        "type": "address"
+      }
+    ],
+    "name": "OptionSetIssued",
+    "type": "event"
+  },
+  {
+    "inputs": [
+      { "internalType": "uint256", "name": "_optionSetId", "type": "uint256" },
+      {
+        "internalType": "uint256",
+        "name": "_supplyCollateralAmountIncr",
+        "type": "uint256"
+      }
+    ],
+    "name": "addLiquidity",
+    "outputs": [{ "internalType": "bool", "name": "", "type": "bool" }],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "components": [
+          {
+            "internalType": "uint256",
+            "name": "inflection",
+            "type": "uint256"
+          },
+          { "internalType": "uint256", "name": "cap", "type": "uint256" },
+          { "internalType": "uint256", "name": "floor", "type": "uint256" },
+          {
+            "internalType": "uint256",
+            "name": "collateralBalanceShort",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "collateralBalanceLong",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "expiryDate",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "supplyShort",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "supplyLong",
+            "type": "uint256"
+          },
+          {
+            "internalType": "string",
+            "name": "referenceAsset",
+            "type": "string"
+          },
+          {
+            "internalType": "address",
+            "name": "collateralToken",
+            "type": "address"
+          },
+          {
+            "internalType": "address",
+            "name": "dataFeedProvider",
+            "type": "address"
+          }
+        ],
+        "internalType": "struct IDIVAFactory.OptionSetParams",
+        "name": "_optionSetParams",
+        "type": "tuple"
+      }
+    ],
+    "name": "issueOptionSet",
+    "outputs": [{ "internalType": "bool", "name": "", "type": "bool" }],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      { "internalType": "uint256", "name": "_optionSetId", "type": "uint256" },
+      {
+        "internalType": "uint256",
+        "name": "_amountLongTokens",
+        "type": "uint256"
+      }
+    ],
+    "name": "removeLiquidity",
+    "outputs": [{ "internalType": "bool", "name": "", "type": "bool" }],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  }
+]
